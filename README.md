@@ -8,6 +8,8 @@ This experiment is based on the following assumptions:
 
 * Firefox [Profiles][], aside from being difficult to configure and use, also lack a variety of affordances that are present in separate browser products. For instance, Firefox and Chrome have different icons and application names, which is of immense aid when navigating between different contexts.
 
+Fireskulk enables the notion of site-specific browsers as implemented by tools like Mozilla Prism and Fluid, but it generalizes the notion into what might be called *task-specific* browsing. It effectively gives the user a "browser factory" that can be used to create a specialized browser for whatever kind of task the user has in mind.
+
 ## Use ##
 
 To use Fireskulk:
