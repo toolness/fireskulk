@@ -16,7 +16,7 @@ To use Fireskulk:
 
   2. In this directory, create a subdirectory called whatever you want to name your new browser. If you want to call it `Workfox`, for instance, create a new directory called `~/.fireskulk/Workfox`.
 
-  3. Put an icon file in this directory called `firefox.icns`. This will be used as the new browser's application icon. You can use Icon Composer to do this, which comes with OS X's developer tools.
+  3. Put an icon file in this directory called `firefox.icns`. This will be used as the new browser's application icon. You can use [Icon Composer][] to do this, which comes with OS X's developer tools.
 
   4. Run `fireskulk.py`. This will place new browsers in your `/Applications` directory.
 
@@ -25,3 +25,4 @@ To use Fireskulk:
 Fireskulk works by cloning `/Applications/Firefox.app` and invasively modifying its OS X and XULRunner metadata. Software update is almost guaranteed to be broken.
 
   [Profiles]: http://support.mozilla.com/en-US/kb/managing+profiles
+  [Icon Composer]: http://tutorialdog.com/how-to-create-icons-for-mac-os-x/
