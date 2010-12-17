@@ -9,6 +9,13 @@ STRINGS = "%s/Contents/Resources/en.lproj/InfoPlist.strings"
 APP_INI = "%s/Contents/MacOS/application.ini"
 FIREFOX_ICNS = "%s/Contents/Resources/firefox.icns"
 
+# Hardlink files instead of copying them.
+copy = os.link
+
+# Alternatively, comment-out the above line and replace with
+# the line below to use file copying instead.
+#copy = shutil.copyfile
+
 def makefox(name, rootdir):
     srcdir = "/Applications/Firefox.app"
     appdir = "/Applications/%s.app" % name
@@ -49,9 +56,9 @@ def makefox(name, rootdir):
                 f.write(strings.replace('Firefox', name).encode('utf-16'))
                 f.close()
             elif abs_src_file == FIREFOX_ICNS % srcdir:
-                os.link("%s/firefox.icns" % rootdir, abs_dest_file)                
+                os.link("%s/firefox.icns" % rootdir, abs_dest_file)
             else:
-                os.link(abs_src_file, abs_dest_file)
+                copy(abs_src_file, abs_dest_file)
 
 if __name__ == '__main__':
     cfgdir = os.path.expanduser('~/.fireskulk')
